@@ -1,13 +1,10 @@
-```js
-jQuery.fn.dataTable.tables(true).forEach(function (tbl) {
-    var api = jQuery(tbl).DataTable()
-    console.log('=== TABLE ID:', api.table().node().id, '===')
+# Filter Soon-to-Expire Domains with Active Websites
 
-    // Végigmegyünk az összes soron
-    let result = []
-    api.rows().every(function () {
-        result.push(this.data())
-    })
-    console.log(result)
-})
+This tool filters soon-to-expire domains from a JSON file and saves only those with an active website.
+
 ```
+node main.js
+```
+
+result.json - soon-to-expire domains
+good.json - soon-to-expire domains with website
